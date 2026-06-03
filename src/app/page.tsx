@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
-import { motion, useInView, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+import { motion, useInView, useScroll, useTransform, useSpring, useMotionValue, AnimatePresence } from "framer-motion";
 
 /* ═══════════════════════════════════════════════════
    ANIMATION UTILITIES
@@ -34,24 +34,6 @@ const scaleIn = {
     transition: { duration: 0.5 },
   },
 };
-
-// Animated counter hook
-function useCounter(target: number, duration = 2000, start = false) {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    if (!start) return;
-    let startTime: number;
-    const step = (timestamp: number) => {
-      if (!startTime) startTime = timestamp;
-      const progress = Math.min((timestamp - startTime) / duration, 1);
-      const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-      setCount(Math.floor(eased * target));
-      if (progress < 1) requestAnimationFrame(step);
-    };
-    requestAnimationFrame(step);
-  }, [target, duration, start]);
-  return count;
-}
 
 // Magnetic button hook
 function useMagnetic(strength = 0.3) {
@@ -120,13 +102,157 @@ function P() {
 }
 
 /* ═══════════════════════════════════════════════════
+   CUSTOM CURSOR
+   ═══════════════════════════════════════════════════ */
+
+function CustomCursor() {
+  const cursorX = useMotionValue(0);
+  const cursorY = useMotionValue(0);
+  const [isHovering, setIsHovering] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const springConfig = { stiffness: 500, damping: 28 };
+  const smoothX = useSpring(cursorX, springConfig);
+  const smoothY = useSpring(cursorY, springConfig);
+
+  useEffect(() => {
+    // Only show custom cursor on desktop
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouchDevice) return;
+
+    const moveCursor = (e: MouseEvent) => {
+      cursorX.set(e.clientX);
+      cursorY.set(e.clientY);
+      if (!isVisible) setIsVisible(true);
+    };
+
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a, button, [role='button'], .cursor-hover")) {
+        setIsHovering(true);
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.closest("a, button, [role='button'], .cursor-hover")) {
+        setIsHovering(false);
+      }
+    };
+
+    const handleLeave = () => setIsVisible(false);
+    const handleEnter = () => setIsVisible(true);
+
+    window.addEventListener("mousemove", moveCursor);
+    document.addEventListener("mouseover", handleMouseOver);
+    document.addEventListener("mouseout", handleMouseOut);
+    document.addEventListener("mouseleave", handleLeave);
+    document.addEventListener("mouseenter", handleEnter);
+
+    return () => {
+      window.removeEventListener("mousemove", moveCursor);
+      document.removeEventListener("mouseover", handleMouseOver);
+      document.removeEventListener("mouseout", handleMouseOut);
+      document.removeEventListener("mouseleave", handleLeave);
+      document.removeEventListener("mouseenter", handleEnter);
+    };
+  }, [cursorX, cursorY, isVisible]);
+
+  return (
+    <>
+      {/* Main dot */}
+      <motion.div
+        className="fixed top-0 left-0 pointer-events-none z-[9999] mix-blend-difference hidden md:block"
+        style={{ x: smoothX, y: smoothY }}
+      >
+        <motion.div
+          className="rounded-full bg-white -translate-x-1/2 -translate-y-1/2"
+          animate={{
+            width: isHovering ? 40 : 8,
+            height: isHovering ? 40 : 8,
+            opacity: isVisible ? 1 : 0,
+          }}
+          transition={{ duration: 0.2 }}
+        />
+      </motion.div>
+    </>
+  );
+}
+
+/* ═══════════════════════════════════════════════════
+   THEME TOGGLE
+   ═══════════════════════════════════════════════════ */
+
+function useTheme() {
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  useEffect(() => {
+    const stored = localStorage.getItem("theme") as "dark" | "light" | null;
+    if (stored) {
+      setTheme(stored);
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+  }, []);
+
+  const toggle = useCallback(() => {
+    const next = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  }, [theme]);
+
+  return { theme, toggle };
+}
+
+function ThemeToggle({ theme, toggle }: { theme: string; toggle: () => void }) {
+  return (
+    <button
+      onClick={toggle}
+      className="relative w-8 h-8 flex items-center justify-center rounded-md border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors"
+      aria-label="Toggle theme"
+    >
+      <AnimatePresence mode="wait">
+        {theme === "dark" ? (
+          <motion.svg
+            key="sun"
+            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            className="text-[var(--text-secondary)]"
+            initial={{ rotate: -90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: 90, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </motion.svg>
+        ) : (
+          <motion.svg
+            key="moon"
+            width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
+            className="text-[var(--text-secondary)]"
+            initial={{ rotate: 90, opacity: 0 }}
+            animate={{ rotate: 0, opacity: 1 }}
+            exit={{ rotate: -90, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </motion.svg>
+        )}
+      </AnimatePresence>
+    </button>
+  );
+}
+
+/* ═══════════════════════════════════════════════════
    MAIN PAGE
    ═══════════════════════════════════════════════════ */
 
 export default function Home() {
+  const { theme, toggle } = useTheme();
+
   return (
     <>
-      <Nav />
+      <CustomCursor />
+      <Nav theme={theme} toggleTheme={toggle} />
       <Hero />
       <main className="max-w-5xl mx-auto px-5 sm:px-8 space-y-24 pb-24">
         <ExperienceSection />
@@ -143,7 +269,7 @@ export default function Home() {
    NAV
    ═══════════════════════════════════════════════════ */
 
-function Nav() {
+function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -153,7 +279,6 @@ function Nav() {
     return () => window.removeEventListener("scroll", fn);
   }, []);
 
-  // Close mobile menu on route change
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -182,7 +307,8 @@ function Nav() {
               <a key={item} href={`#${item.toLowerCase()}`} className="nav-link">{item}</a>
             ))}
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
+            <ThemeToggle theme={theme} toggle={toggleTheme} />
             <MagneticButton>
               <a
                 href="/cv.pdf"
@@ -504,7 +630,7 @@ function ExpCard({ role, company, period, items, tags }: {
 }
 
 /* ═══════════════════════════════════════════════════
-   PROJECTS
+   PROJECTS (enhanced micro-interactions)
    ═══════════════════════════════════════════════════ */
 
 function ProjectsSection() {
@@ -556,41 +682,74 @@ function ProjectsSection() {
 function ProjectCard({ name, desc, impact, tags, color, github }: {
   name: string; desc: string; impact: string; tags: string[]; color: string; github: string;
 }) {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <motion.a
       href={github}
       target="_blank"
       rel="noopener noreferrer"
-      className="group h-full flex flex-col p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors cursor-pointer"
+      className="group h-full flex flex-col p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors cursor-pointer relative overflow-hidden"
       whileHover={{ y: -4, boxShadow: "0 16px 50px rgba(0,0,0,0.3)" }}
       transition={{ duration: 0.25 }}
+      onHoverStart={() => setHovered(true)}
+      onHoverEnd={() => setHovered(false)}
     >
-      <div className="flex items-center justify-between mb-3">
+      {/* Glow effect on hover */}
+      <motion.div
+        className="absolute inset-0 opacity-0 pointer-events-none rounded-xl"
+        style={{ background: `radial-gradient(circle at 50% 0%, ${color}15, transparent 70%)` }}
+        animate={{ opacity: hovered ? 1 : 0 }}
+        transition={{ duration: 0.3 }}
+      />
+
+      <div className="relative z-10 flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <motion.span
             className="w-2 h-2 rounded-full"
             style={{ background: color }}
-            animate={{ scale: [1, 1.3, 1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            animate={hovered ? { scale: [1, 1.5, 1], boxShadow: `0 0 8px ${color}` } : { scale: 1 }}
+            transition={{ duration: 0.5 }}
           />
           <span className="text-[10px] font-semibold uppercase tracking-wider" style={{ color }}>
             {impact}
           </span>
         </div>
-        <svg
+        <motion.svg
           width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-          className="text-[var(--text-muted)] group-hover:text-[var(--text)] transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="text-[var(--text-muted)]"
+          animate={hovered ? { x: 2, y: -2, color: "var(--text)" } : { x: 0, y: 0 }}
+          transition={{ duration: 0.2 }}
         >
           <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-        </svg>
+        </motion.svg>
       </div>
 
-      <h3 className="text-sm font-semibold text-[var(--text)] mb-2">{name}</h3>
-      <p className="text-xs text-[var(--text-secondary)] leading-relaxed flex-grow">{desc}</p>
+      <h3 className="relative z-10 text-sm font-semibold text-[var(--text)] mb-2">{name}</h3>
+      <p className="relative z-10 text-xs text-[var(--text-secondary)] leading-relaxed flex-grow">{desc}</p>
 
-      <div className="flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-[var(--border)]">
-        {tags.map((t) => <span key={t} className="tag">{t}</span>)}
+      <div className="relative z-10 flex flex-wrap gap-1.5 mt-4 pt-3 border-t border-[var(--border)]">
+        {tags.map((t, i) => (
+          <motion.span
+            key={t}
+            className="tag"
+            animate={hovered ? { y: -1 } : { y: 0 }}
+            transition={{ delay: i * 0.03, duration: 0.2 }}
+          >
+            {t}
+          </motion.span>
+        ))}
       </div>
+
+      {/* "View project" text on hover */}
+      <motion.div
+        className="absolute bottom-5 right-5 z-10"
+        initial={{ opacity: 0, x: -5 }}
+        animate={hovered ? { opacity: 1, x: 0 } : { opacity: 0, x: -5 }}
+        transition={{ duration: 0.2 }}
+      >
+        <span className="text-[10px] font-medium" style={{ color }}>View project →</span>
+      </motion.div>
     </motion.a>
   );
 }
@@ -623,7 +782,7 @@ function StackSection() {
               {cat.items.map((item) => (
                 <motion.span
                   key={item}
-                  className="tag"
+                  className="tag cursor-hover"
                   whileHover={{ scale: 1.05, borderColor: "var(--green)", color: "var(--green)" }}
                   transition={{ duration: 0.15 }}
                 >
