@@ -174,8 +174,8 @@ function Nav() {
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled ? "bg-[var(--bg)]/80 backdrop-blur-xl border-b border-[var(--border)]" : ""}`}
       >
         <div className="max-w-5xl mx-auto flex items-center justify-between h-14 px-5 sm:px-8">
-          <a href="#" className="text-sm font-semibold tracking-tight text-[var(--text)]">
-            M<span className="text-[var(--green)]">.</span>E<span className="text-[var(--green)]">.</span>S
+          <a href="#" className="text-sm font-medium tracking-tight text-[var(--text)] font-mono">
+            Mikhaeledo<span className="text-[var(--green)]">.</span>
           </a>
           <div className="hidden md:flex items-center gap-7">
             {navItems.map((item) => (
