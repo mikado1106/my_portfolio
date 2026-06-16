@@ -1,0 +1,18 @@
+[     152ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1463ms] [LOG] [Fast Refresh] done in 1413ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1849ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1951ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2276ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2344ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2501ms] [LOG] [Fast Refresh] done in 330ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28056ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28284ms] [LOG] [Fast Refresh] done in 332ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28400ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28447ms] [LOG] [Fast Refresh] done in 158ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28705ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   28744ms] [LOG] [Fast Refresh] done in 140ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   96435ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   96553ms] [LOG] [Fast Refresh] done in 228ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   96672ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   96727ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   96955ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

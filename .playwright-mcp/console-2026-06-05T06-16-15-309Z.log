@@ -1,0 +1,396 @@
+[   39979ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[   40404ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_react-dom_0kla17-._.js:15305
+[   40541ms] Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createServerClient (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_0gtevqa._.js:10566:15)
+    at updateSession (file://D:\LandingPage\.next\dev\server\edge\chunks\[root-of-the-server]__01hc-tz._.js:30:226)
+    at middleware (file://D:\LandingPage\.next\dev\server\edge\chunks\[root-of-the-server]__01hc-tz._.js:68:180)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:19107:26)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7853:655)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7853:325)
+    at async adapter (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7807:16)
+    at async (file://D:\LandingPage\node_modules\next\dist\server\web\sandbox\sandbox.js:115:26)
+[   40545ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[   41096ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:6001/favicon.ico:0
+[   45330ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[   51937ms] [LOG] [Fast Refresh] done in 6707ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  183010ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  183042ms] [LOG] [Fast Refresh] done in 145ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  183275ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  185693ms] [WARNING] [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  185701ms] [WARNING] [Fast Refresh] performing full reload because your application had an unrecoverable error @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  186012ms] [LOG] [Fast Refresh] done in 2675ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  186122ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187375ms] [LOG] [Fast Refresh] done in 1358ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187495ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187663ms] [LOG] [Fast Refresh] done in 281ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187776ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187839ms] [LOG] [Fast Refresh] done in 171ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187946ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187971ms] [LOG] [Fast Refresh] done in 131ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  187982ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[  188640ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_react-dom_0kla17-._.js:15305
+[  188669ms] Error: Your project's URL and Key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at <unknown> (https://supabase.com/dashboard/project/_/settings/api)
+    at createServerClient (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_0gtevqa._.js:10566:15)
+    at updateSession (file://D:\LandingPage\.next\dev\server\edge\chunks\[root-of-the-server]__01hc-tz._.js:30:226)
+    at middleware (file://D:\LandingPage\.next\dev\server\edge\chunks\[root-of-the-server]__01hc-tz._.js:68:180)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:19107:26)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7853:655)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_hooks:91:14)
+    at <unknown> (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7853:325)
+    at async adapter (file://D:\LandingPage\.next\dev\server\edge\chunks\node_modules_next_dist_05lqd51._.js:7807:16)
+    at async (file://D:\LandingPage\node_modules\next\dist\server\web\sandbox\sandbox.js:115:26)
+[  188710ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  189943ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  189966ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  238650ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  241858ms] [LOG] [Fast Refresh] done in 3292ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  241984ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  295005ms] [LOG] [Fast Refresh] done in 53134ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1gdrd03._.js:1226
+[  295197ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[  295334ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  295383ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  295565ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  295695ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64) The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[  295741ms] [LOG] [Fast Refresh] done in 276ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  295855ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  296386ms] [LOG] [Fast Refresh] done in 637ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  340310ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=f2J7PhDutSLhXdZuTEPUO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[  346475ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=f2J7PhDutSLhXdZuTEPUO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[  352636ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=f2J7PhDutSLhXdZuTEPUO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[  358795ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=f2J7PhDutSLhXdZuTEPUO' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[  407956ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  432926ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[  433636ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  433677ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  433885ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  433926ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64) The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[  434475ms] [LOG] [Fast Refresh] done in 693ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  436249ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  436367ms] [LOG] [Fast Refresh] done in 225ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  445595ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  445783ms] [LOG] [Fast Refresh] done in 304ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1019021ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1019028ms] [LOG] [Fast Refresh] done in 112ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1019143ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1022545ms] [LOG] [Fast Refresh] done in 3514ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1546023ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1547470ms] [LOG] [Fast Refresh] done in 1560ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2146141ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2146560ms] [LOG] [Fast Refresh] done in 523ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2146679ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2146893ms] [LOG] [Fast Refresh] done in 319ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2462461ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2462817ms] [LOG] [Fast Refresh] done in 461ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3972645ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3972710ms] [LOG] [Fast Refresh] done in 178ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 7980840ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 7982668ms] [LOG] [Fast Refresh] done in 1944ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 8146884ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 8146946ms] [LOG] [Fast Refresh] done in 167ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33895639ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performSyncWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10179:316)
+    at processRootScheduleInMicrotask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10200:106)
+    at http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10274:158 The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[33896776ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performSyncWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10263:9)
+    at flushSyncWorkAcrossRoots_impl (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10179:316)
+    at processRootScheduleInMicrotask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10200:106)
+    at http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10274:158 The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[33898630ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33898857ms] [LOG] [Fast Refresh] done in 329ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33899604ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[33899857ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33899923ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33900047ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64) The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[33900118ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33900601ms] [LOG] [Fast Refresh] done in 586ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903010ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903057ms] [LOG] [Fast Refresh] done in 150ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903112ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:6001/admin/login:0
+[33903178ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903212ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903295ms] [ERROR] %o
+
+%s Error: @supabase/ssr: Your project's URL and API key are required to create a Supabase client!
+
+Check your Supabase project's API settings to find these values
+
+https://supabase.com/dashboard/project/_/settings/api
+    at createBrowserClient (http://localhost:6001/_next/static/chunks/node_modules_1mngslq._.js:28291:15)
+    at createClient (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:13:213)
+    at AdminLayout (http://localhost:6001/_next/static/chunks/src_1perc1w._.js:69:174)
+    at Object.react_stack_bottom_frame (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:15037:24)
+    at renderWithHooks (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:4620:24)
+    at updateFunctionComponent (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6081:21)
+    at beginWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:6665:639)
+    at runWithFiberInDEV (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:965:74)
+    at performUnitOfWork (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9555:97)
+    at workLoopSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9449:40)
+    at renderRootSync (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9433:13)
+    at performWorkOnRoot (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:9098:47)
+    at performWorkOnRootViaSchedulerTask (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_react-dom_096_9a-._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (http://localhost:6001/_next/static/chunks/node_modules_next_dist_compiled_1amofcm._.js:2647:64) The above error occurred in the <AdminLayout> component. It was handled by the <ErrorBoundaryHandler> error boundary. @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:1998
+[33903339ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[33903667ms] [LOG] [Fast Refresh] done in 440ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34529347ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34529366ms] [LOG] [Fast Refresh] done in 141ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34846717ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34875274ms] [LOG] [Fast Refresh] done in 29236ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34877628ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34877777ms] [LOG] [Fast Refresh] done in 256ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34898518ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34899852ms] [LOG] [Fast Refresh] done in 1469ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34981472ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34981687ms] [LOG] [Fast Refresh] done in 334ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34981839ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34981860ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34982235ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34982248ms] [LOG] [Fast Refresh] done in 125ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34982369ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[34982391ms] [LOG] [Fast Refresh] done in 130ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35007778ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35018573ms] [LOG] [Fast Refresh] done in 10934ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35018687ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35019889ms] [LOG] [Fast Refresh] done in 1315ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35020032ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35020093ms] [LOG] [Fast Refresh] done in 174ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35031365ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35051739ms] [LOG] [Fast Refresh] done in 21321ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35063941ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35068783ms] [LOG] [Fast Refresh] done in 5771ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35071299ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:6001/admin/login:0
+[35071618ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35071942ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35095123ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35095351ms] [LOG] [Fast Refresh] done in 3ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35126218ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35127201ms] [LOG] [Fast Refresh] done in 1122ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35189928ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35190033ms] [LOG] [Fast Refresh] done in 68ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35285252ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35285538ms] [LOG] [Fast Refresh] done in 401ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35285754ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35286474ms] [LOG] [Fast Refresh] done in 684ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35289391ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35290562ms] [LOG] [Fast Refresh] done in 1277ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35297198ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35303259ms] [LOG] [Fast Refresh] done in 1ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35303271ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35303422ms] [LOG] [Fast Refresh] done in 157ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304072ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304077ms] [LOG] [Fast Refresh] done in 144ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304182ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304233ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304353ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304402ms] [LOG] [Fast Refresh] done in 148ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304599ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304620ms] [LOG] [Fast Refresh] done in 181ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304816ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304863ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35304974ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35305028ms] [LOG] [Fast Refresh] done in 164ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35305238ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35305239ms] [LOG] [Fast Refresh] done in 137ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35308364ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35308387ms] [LOG] [Fast Refresh] done in 155ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35308927ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35308960ms] [LOG] [Fast Refresh] done in 234ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35309570ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35309578ms] [LOG] [Fast Refresh] done in 222ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35310569ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35310705ms] [LOG] [Fast Refresh] done in 242ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35311003ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35311010ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35354101ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35372961ms] [LOG] [Fast Refresh] done in 20615ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35373300ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35373886ms] [LOG] [Fast Refresh] done in 584ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35376620ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35376764ms] [LOG] [Fast Refresh] done in 308ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35377300ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35377352ms] [LOG] [Fast Refresh] done in 554ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35378703ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35378707ms] [LOG] [Fast Refresh] done in 124ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35379164ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35379166ms] [LOG] [Fast Refresh] done in 457ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35379610ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35379631ms] [LOG] [Fast Refresh] done in 126ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35380606ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35380609ms] [LOG] [Fast Refresh] done in 189ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35382501ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35382532ms] [LOG] [Fast Refresh] done in 146ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35385379ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35386006ms] [LOG] [Fast Refresh] done in 1053ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35764619ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35770768ms] [LOG] [Fast Refresh] done in 7534ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35879233ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[35935052ms] [LOG] [Fast Refresh] done in 51304ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[36274802ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[36276920ms] [LOG] [Fast Refresh] done in 2424ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[36347861ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[36347941ms] [LOG] [Fast Refresh] done in 187ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[37920047ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[37921693ms] [LOG] [Fast Refresh] done in 1752ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[38748135ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[38750812ms] [LOG] [Fast Refresh] done in 2788ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39201594ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39201855ms] [LOG] [Fast Refresh] done in 372ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39202148ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39202218ms] [LOG] [Fast Refresh] done in 173ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39202351ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[39202412ms] [LOG] [Fast Refresh] done in 166ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71248604ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71254183ms] [LOG] [Fast Refresh] done in 5805ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71383785ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71383948ms] [LOG] [Fast Refresh] done in 292ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71507687ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71518861ms] [LOG] [Fast Refresh] done in 12157ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71883498ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71883580ms] [LOG] [Fast Refresh] done in 215ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71897170ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71897350ms] [LOG] [Fast Refresh] done in 304ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71897507ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[71900550ms] [LOG] [Fast Refresh] done in 3165ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[72784070ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[72784138ms] [LOG] [Fast Refresh] done in 311ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73264469ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73267508ms] [LOG] [Fast Refresh] done in 3167ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73285505ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73297648ms] [LOG] [Fast Refresh] done in 12231ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73683474ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73683491ms] [LOG] [Fast Refresh] done in 246ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73924562ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[73930436ms] [LOG] [Fast Refresh] done in 6220ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[75954443ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[75954492ms] [LOG] [Fast Refresh] done in 168ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[78066572ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[78066576ms] [LOG] [Fast Refresh] done in 122ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[81666774ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[81666780ms] [LOG] [Fast Refresh] done in 115ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[85267093ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[85267116ms] [LOG] [Fast Refresh] done in 136ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[86467319ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[86467377ms] [LOG] [Fast Refresh] done in 160ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[88985939ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[88985990ms] [LOG] [Fast Refresh] done in 175ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[89157653ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[89157676ms] [LOG] [Fast Refresh] done in 139ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

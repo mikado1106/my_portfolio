@@ -1,0 +1,36 @@
+[     433ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2640ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    2688ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    3168ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   70597ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   70814ms] [LOG] [Fast Refresh] done in 330ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   71324ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   71813ms] [LOG] [Fast Refresh] done in 593ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1680672ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1680858ms] [LOG] [Fast Refresh] done in 293ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682111ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682177ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682334ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682377ms] [LOG] [Fast Refresh] done in 153ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682433ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682487ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 1682975ms] [LOG] [Fast Refresh] done in 591ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 2920266ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=O-yZHy7k9pwptlR7OnPZu' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[ 2923636ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=O-yZHy7k9pwptlR7OnPZu' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[ 2926990ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=O-yZHy7k9pwptlR7OnPZu' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[ 2930354ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=O-yZHy7k9pwptlR7OnPZu' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[ 2933720ms] [ERROR] WebSocket connection to 'ws://localhost:6001/_next/webpack-hmr?id=O-yZHy7k9pwptlR7OnPZu' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_client_0r5nbpw._.js:13422
+[ 2988724ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3001193ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3001293ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3001490ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3001609ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3002496ms] [LOG] [Fast Refresh] done in 1117ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3019948ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3020140ms] [LOG] [Fast Refresh] done in 296ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3103195ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3129219ms] [LOG] [Fast Refresh] done in 26097ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3129403ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3130189ms] [LOG] [Fast Refresh] done in 891ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3133076ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[ 3134089ms] [LOG] [Fast Refresh] done in 919ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477

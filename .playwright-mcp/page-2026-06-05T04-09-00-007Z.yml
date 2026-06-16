@@ -1,0 +1,291 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - link "Mikhaeledo." [ref=e5] [cursor=pointer]:
+        - /url: "#"
+      - generic [ref=e6]:
+        - link "Experience" [ref=e7] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Projects" [ref=e8] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Education" [ref=e9] [cursor=pointer]:
+          - /url: "#education"
+        - link "Stack" [ref=e10] [cursor=pointer]:
+          - /url: "#stack"
+        - link "Contact" [ref=e11] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e12]:
+        - button "Switch to light mode" [ref=e13]:
+          - img [ref=e14]
+        - link "Resume" [ref=e21] [cursor=pointer]:
+          - /url: /cv.pdf
+          - img [ref=e22]
+          - text: Resume
+        - link "Let's talk" [ref=e26] [cursor=pointer]:
+          - /url: "#contact"
+  - generic [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e33]: Available for opportunities
+      - heading "Mikhael Edo Sinambela" [level=1] [ref=e35]:
+        - text: Mikhael Edo
+        - text: Sinambela
+      - paragraph [ref=e36]: Full-stack developer who shipped an HRIS serving 40+ employees and maintained a corporate site at 99% uptime. I build fast, accessible interfaces with modern tools.
+      - generic [ref=e37]:
+        - link "Contact me" [ref=e39] [cursor=pointer]:
+          - /url: mailto:edomikhael@gmail.com
+        - link "View projects ↓" [ref=e41] [cursor=pointer]:
+          - /url: "#projects"
+      - generic [ref=e42]:
+        - link "Visit LinkedIn profile" [ref=e43] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/mikhaeledo
+          - text: LinkedIn ↗
+        - link "Visit GitHub profile" [ref=e44] [cursor=pointer]:
+          - /url: https://github.com/mikado1106
+          - text: GitHub ↗
+        - generic [ref=e45]: ·
+        - generic [ref=e46]: Jakarta, Indonesia
+    - img "Mikhael Edo Sinambela" [ref=e49]
+  - main [ref=e51]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]: 99%
+        - paragraph [ref=e56]: Uptime maintained
+      - generic [ref=e57]:
+        - generic [ref=e58]: 50%
+        - paragraph [ref=e59]: Efficiency gain
+      - generic [ref=e60]:
+        - generic [ref=e61]: 40+
+        - paragraph [ref=e62]: Employees served
+      - generic [ref=e63]:
+        - generic [ref=e64]: 4+
+        - paragraph [ref=e65]: Projects shipped
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - paragraph [ref=e69]: Experience
+        - heading "Where I've contributed" [level=2] [ref=e70]
+      - generic [ref=e71]:
+        - generic [ref=e73]:
+          - generic [ref=e74]:
+            - generic [ref=e75]:
+              - heading "Full Stack Developer Intern" [level=3] [ref=e76]
+              - paragraph [ref=e77]: Mandiri Inhealth
+            - generic [ref=e78]: Jan – Jun 2025
+          - list [ref=e79]:
+            - listitem [ref=e80]:
+              - generic [ref=e81]: ✓
+              - text: Maintained corporate website — 99% uptime
+            - listitem [ref=e82]:
+              - generic [ref=e83]: ✓
+              - text: Resolved 10+ production bugs
+            - listitem [ref=e84]:
+              - generic [ref=e85]: ✓
+              - text: Built RESTful API integrations
+            - listitem [ref=e86]:
+              - generic [ref=e87]: ✓
+              - text: Docker-based dev environment setup
+          - generic [ref=e88]:
+            - generic [ref=e89]: PHP
+            - generic [ref=e90]: CodeIgniter
+            - generic [ref=e91]: Docker
+            - generic [ref=e92]: MySQL
+        - generic [ref=e94]:
+          - generic [ref=e95]:
+            - generic [ref=e96]:
+              - heading "Full Stack Developer" [level=3] [ref=e97]
+              - paragraph [ref=e98]: HRIS System
+            - generic [ref=e99]: Jun 2022 – Jan 2026
+          - list [ref=e100]:
+            - listitem [ref=e101]:
+              - generic [ref=e102]: ✓
+              - text: Built full-cycle HRIS from scratch
+            - listitem [ref=e103]:
+              - generic [ref=e104]: ✓
+              - text: 50% less manual data entry
+            - listitem [ref=e105]:
+              - generic [ref=e106]: ✓
+              - text: Managed ~40 employee records
+            - listitem [ref=e107]:
+              - generic [ref=e108]: ✓
+              - text: Automated attendance tracking
+          - generic [ref=e109]:
+            - generic [ref=e110]: PHP
+            - generic [ref=e111]: CodeIgniter 4
+            - generic [ref=e112]: MySQL
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - paragraph [ref=e116]: Projects
+        - heading "Things I've built" [level=2] [ref=e117]
+      - generic [ref=e118]:
+        - link "Employee Management System — 50% efficiency gain" [ref=e120] [cursor=pointer]:
+          - /url: https://github.com/mikado1106
+          - generic [ref=e121]:
+            - generic [ref=e124]: 50% efficiency gain
+            - img [ref=e125]
+          - heading "Employee Management System" [level=3] [ref=e128]
+          - paragraph [ref=e129]: Full-cycle HRIS — digitized HR processes, centralized data, automated attendance. Reduced manual entry time by half.
+          - generic [ref=e130]:
+            - generic [ref=e131]: PHP
+            - generic [ref=e132]: CodeIgniter 4
+            - generic [ref=e133]: MySQL
+        - link "Salon Reservation App — 40% faster booking" [ref=e135] [cursor=pointer]:
+          - /url: https://github.com/mikado1106
+          - generic [ref=e136]:
+            - generic [ref=e139]: 40% faster booking
+            - img [ref=e140]
+          - heading "Salon Reservation App" [level=3] [ref=e143]
+          - paragraph [ref=e144]: Mobile booking app with real-time Firebase sync. Optimized UX flow reduced booking friction significantly.
+          - generic [ref=e145]:
+            - generic [ref=e146]: Flutter
+            - generic [ref=e147]: Dart
+            - generic [ref=e148]: Firebase
+        - link "Tourism Web Platform — 20+ destinations live" [ref=e150] [cursor=pointer]:
+          - /url: https://github.com/mikado1106
+          - generic [ref=e151]:
+            - generic [ref=e154]: 20+ destinations live
+            - img [ref=e155]
+          - heading "Tourism Web Platform" [level=3] [ref=e158]
+          - paragraph [ref=e159]: Interactive tourism site with 20+ destinations, curated content, and responsive design for all devices.
+          - generic [ref=e160]:
+            - generic [ref=e161]: PHP
+            - generic [ref=e162]: MySQL
+            - generic [ref=e163]: HTML/CSS
+        - link "Portfolio Website — Open source" [ref=e165] [cursor=pointer]:
+          - /url: https://github.com/mikado1106
+          - generic [ref=e166]:
+            - generic [ref=e169]: Open source
+            - img [ref=e170]
+          - heading "Portfolio Website" [level=3] [ref=e173]
+          - paragraph [ref=e174]: Modern developer portfolio built with Next.js 16, React 19, Framer Motion, and terminal-inspired design system.
+          - generic [ref=e175]:
+            - generic [ref=e176]: Next.js
+            - generic [ref=e177]: React 19
+            - generic [ref=e178]: Tailwind CSS
+      - link "View more on GitHub →" [ref=e180] [cursor=pointer]:
+        - /url: https://github.com/mikado1106
+        - img [ref=e181]
+        - text: View more on GitHub →
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - paragraph [ref=e186]: Education
+        - heading "Background & certifications" [level=2] [ref=e187]
+      - generic [ref=e188]:
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - heading "Bachelor of Information Systems" [level=3] [ref=e193]
+              - paragraph [ref=e194]: Universitas Bunda Mulia
+            - generic [ref=e195]: 2020 – 2024
+          - paragraph [ref=e196]: Focused on software engineering, web development, and database systems.
+          - list [ref=e197]:
+            - listitem [ref=e198]:
+              - generic [ref=e199]: ◆
+              - text: Built multiple full-stack projects
+            - listitem [ref=e200]:
+              - generic [ref=e201]: ◆
+              - text: Active in campus tech community
+            - listitem [ref=e202]:
+              - generic [ref=e203]: ◆
+              - text: "Final project: Employee Management System (HRIS)"
+        - generic [ref=e205]:
+          - heading "Certifications" [level=3] [ref=e206]
+          - generic [ref=e207]:
+            - generic [ref=e210]:
+              - paragraph [ref=e211]: Belajar Dasar Pemrograman Web
+              - paragraph [ref=e212]: Dicoding Indonesia · 2023
+            - generic [ref=e215]:
+              - paragraph [ref=e216]: Belajar Membuat Aplikasi Flutter untuk Pemula
+              - paragraph [ref=e217]: Dicoding Indonesia · 2023
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - paragraph [ref=e221]: Stack
+        - heading "Technologies I use" [level=2] [ref=e222]
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]: Languages
+          - generic [ref=e226]:
+            - generic [ref=e227]: PHP
+            - generic [ref=e228]: JavaScript
+            - generic [ref=e229]: TypeScript
+            - generic [ref=e230]: Dart
+            - generic [ref=e231]: SQL
+            - generic [ref=e232]: HTML/CSS
+        - generic [ref=e233]:
+          - generic [ref=e234]: Frontend
+          - generic [ref=e235]:
+            - generic [ref=e236]: React
+            - generic [ref=e237]: Next.js
+            - generic [ref=e238]: Flutter
+            - generic [ref=e239]: Tailwind CSS
+        - generic [ref=e240]:
+          - generic [ref=e241]: Backend
+          - generic [ref=e242]:
+            - generic [ref=e243]: CodeIgniter 4
+            - generic [ref=e244]: Node.js
+            - generic [ref=e245]: REST APIs
+        - generic [ref=e246]:
+          - generic [ref=e247]: Data & Infra
+          - generic [ref=e248]:
+            - generic [ref=e249]: MySQL
+            - generic [ref=e250]: Firebase
+            - generic [ref=e251]: Docker
+            - generic [ref=e252]: Git
+        - generic [ref=e253]:
+          - generic [ref=e254]: Design
+          - generic [ref=e255]:
+            - generic [ref=e256]: Figma
+            - generic [ref=e257]: UI/UX
+            - generic [ref=e258]: Responsive Design
+    - generic [ref=e260]:
+      - generic [ref=e261]:
+        - paragraph [ref=e262]: Contact
+        - heading "Let's build something" [level=2] [ref=e263]
+        - paragraph [ref=e264]: Open for full-time positions and freelance projects. Currently based in Jakarta, happy to work remote.
+      - generic [ref=e265]:
+        - generic [ref=e267]:
+          - generic [ref=e273]: contact
+          - generic [ref=e274]:
+            - paragraph [ref=e275]: ❯ open contact.toml
+            - paragraph [ref=e276]:
+              - text: email =
+              - link "\"edomikhael@gmail.com\"" [ref=e277] [cursor=pointer]:
+                - /url: mailto:edomikhael@gmail.com
+            - paragraph [ref=e278]:
+              - text: phone =
+              - link "\"+62 814-1355-7945\"" [ref=e279] [cursor=pointer]:
+                - /url: tel:+6281413557945
+            - paragraph [ref=e280]:
+              - text: linkedin =
+              - link "\"mikhaeledo\"" [ref=e281] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/mikhaeledo
+            - paragraph [ref=e282]:
+              - text: github =
+              - link "\"github.com/mikado1106\"" [ref=e283] [cursor=pointer]:
+                - /url: https://github.com/mikado1106
+            - paragraph [ref=e284]:
+              - text: location =
+              - generic [ref=e285]: "\"Jakarta, Indonesia\""
+            - paragraph [ref=e286]: "# Looking forward to hearing from you."
+            - paragraph [ref=e288]: ❯
+        - generic [ref=e291]:
+          - heading "Quick message" [level=3] [ref=e292]
+          - generic [ref=e293]:
+            - generic [ref=e294]: Name
+            - textbox "Name" [ref=e295]:
+              - /placeholder: Your name
+          - generic [ref=e296]:
+            - generic [ref=e297]: Email
+            - textbox "Email" [ref=e298]:
+              - /placeholder: you@email.com
+          - generic [ref=e299]:
+            - generic [ref=e300]: Message
+            - textbox "Message" [ref=e301]:
+              - /placeholder: Tell me about your project...
+          - button "Send message" [ref=e302]
+  - contentinfo [ref=e303]:
+    - generic [ref=e304]:
+      - generic [ref=e305]: © 2026 Mikhael Edo Sinambela
+      - generic [ref=e306]: Built with Next.js + Tailwind CSS
+  - button "Open Next.js Dev Tools" [ref=e313] [cursor=pointer]:
+    - img [ref=e314]
