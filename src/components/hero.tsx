@@ -65,20 +65,8 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background effects */}
+      {/* Background - subtle grid only */}
       <div className="absolute inset-0 grid-bg" aria-hidden="true" />
-      <motion.div
-        className="orb w-[500px] h-[500px] bg-[var(--green)] opacity-[0.04] top-[-10%] right-[-5%]"
-        animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-        aria-hidden="true"
-      />
-      <motion.div
-        className="orb w-[400px] h-[400px] bg-[var(--blue)] opacity-[0.05] bottom-[0%] left-[-10%]"
-        animate={{ scale: [1, 1.15, 1], rotate: [0, -5, 0] }}
-        transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-        aria-hidden="true"
-      />
 
       <div className="relative z-10 max-w-5xl mx-auto w-full px-5 sm:px-8 pt-20">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">
@@ -117,7 +105,7 @@ export function Hero() {
               className="text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tighter leading-[1.05] text-[var(--text)] mb-6"
               variants={fadeUpBlur}
             >
-              <span className="gradient-name">Mikhael Edo</span>
+              Mikhael Edo
               <br />
               <span className="text-[var(--text-secondary)]">Sinambela</span>
             </motion.h1>
