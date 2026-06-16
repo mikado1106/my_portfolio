@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { MagneticButton } from "@/components/ui/magnetic-button";
 import { useLanguage } from "@/contexts/language-context";
 
 export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => void }) {
@@ -65,34 +64,41 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
           <div className="flex items-center gap-2">
             <button
               onClick={() => setLang(lang === 'en' ? 'id' : 'en')}
-              className="w-8 h-8 flex items-center justify-center rounded-full text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)] transition-colors uppercase"
+              className="relative w-8 h-8 flex items-center justify-center rounded-full text-xs font-bold text-[var(--text-secondary)] hover:text-[var(--text)] hover:bg-[var(--bg-elevated)] transition-colors uppercase overflow-hidden cursor-pointer"
               aria-label="Toggle language"
             >
-              {lang}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={lang}
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="absolute"
+                >
+                  {lang}
+                </motion.span>
+              </AnimatePresence>
             </button>
             <ThemeToggle theme={theme} toggle={toggleTheme} />
-            <MagneticButton>
-              <a
-                href="/cv.pdf"
-                download="CV-Mikhael-Edo-Sinambela.pdf"
-                className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all"
-              >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Resume
-              </a>
-            </MagneticButton>
-            <MagneticButton>
-              <a
-                href="#contact"
-                className="hidden md:inline-block text-xs font-medium px-3.5 py-1.5 rounded-md bg-[var(--text)] text-[var(--bg)] hover:opacity-90 transition-opacity"
-              >
-                Let&apos;s talk
-              </a>
-            </MagneticButton>
+            <a
+              href="/cv.pdf"
+              download="CV-Mikhael-Edo-Sinambela.pdf"
+              className="hidden sm:inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-md border border-[var(--border)] text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all cursor-pointer"
+            >
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Resume
+            </a>
+            <a
+              href="#contact"
+              className="hidden md:inline-block text-xs font-medium px-3.5 py-1.5 rounded-md bg-[var(--text)] text-[var(--bg)] hover:opacity-90 transition-opacity cursor-pointer"
+            >
+              {lang === 'id' ? 'Hubungi' : "Let's talk"}
+            </a>
             {/* Mobile hamburger */}
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="md:hidden flex flex-col gap-[5px] w-7 h-7 items-center justify-center"
+              className="md:hidden flex flex-col gap-[5px] w-7 h-7 items-center justify-center cursor-pointer"
               aria-label="Toggle menu"
               aria-expanded={mobileOpen}
             >
@@ -152,7 +158,7 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center text-sm font-medium px-5 py-2.5 rounded-lg bg-[var(--text)] text-[var(--bg)]"
             >
-              Let&apos;s talk
+              {lang === 'id' ? 'Hubungi saya' : "Let's talk"}
             </a>
           </motion.div>
         </div>
