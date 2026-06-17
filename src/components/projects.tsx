@@ -65,17 +65,13 @@ function ProjectCard({ name, desc, impact, tags, color, github }: {
       className="group h-full flex flex-col p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-all cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10"
       aria-label={`${name} — ${impact}`}
     >
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center gap-2">
-          <span
-            className="w-2 h-2 rounded-full"
-            style={{ background: color }}
-            aria-hidden="true"
-          />
-          <span className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)]">
-            {impact}
-          </span>
-        </div>
+      {/* Top accent line */}
+      <div className="h-px w-12 mb-5 rounded-full" style={{ background: color }} aria-hidden="true" />
+
+      <div className="flex items-center justify-between mb-3">
+        <span className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)]">
+          {impact}
+        </span>
         <svg
           width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
           className="text-[var(--text-muted)] group-hover:text-[var(--text)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"
@@ -85,7 +81,7 @@ function ProjectCard({ name, desc, impact, tags, color, github }: {
         </svg>
       </div>
 
-      <h3 className="text-base font-bold text-[var(--text)] mb-2">{name}</h3>
+      <h3 className="text-base font-bold text-[var(--text)] mb-2 group-hover:text-[var(--green)] transition-colors">{name}</h3>
       <p className="text-sm text-[var(--text-secondary)] leading-relaxed flex-grow">{desc}</p>
 
       <div className="flex flex-wrap gap-2 mt-5 pt-4 border-t border-[var(--border)]">

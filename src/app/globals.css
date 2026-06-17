@@ -94,7 +94,7 @@ body::before {
   inset: 0;
   z-index: 9998;
   pointer-events: none;
-  opacity: 0.015;
+  opacity: 0.02;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-size: 128px 128px;
   mix-blend-mode: overlay;
@@ -102,6 +102,17 @@ body::before {
 
 [data-theme="light"] body::before {
   opacity: 0;
+}
+
+/* ── Dot pattern background ── */
+.dot-bg {
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.4;
+}
+
+[data-theme="light"] .dot-bg {
+  opacity: 0.5;
 }
 
 /* ── Grid background ── */
@@ -113,18 +124,17 @@ body::before {
   opacity: 0.3;
 }
 
-/* ── Glow orbs ── */
-@keyframes float {
-  0%, 100% { transform: translate(0, 0); }
-  33% { transform: translate(20px, -15px); }
-  66% { transform: translate(-15px, 10px); }
-}
-.orb {
+/* ── Ambient gradient blobs (static, no animation) ── */
+.ambient-glow {
   position: absolute;
   border-radius: 50%;
-  filter: blur(80px);
-  animation: float 20s ease-in-out infinite;
+  filter: blur(100px);
   pointer-events: none;
+  opacity: 0.06;
+}
+
+[data-theme="light"] .ambient-glow {
+  opacity: 0.04;
 }
 
 /* ── Terminal ── */
@@ -234,7 +244,7 @@ body::before {
   color: var(--text-muted);
   transition: all 0.2s;
 }
-.tag:hover { border-color: var(--green); color: var(--green); }
+.tag:hover { border-color: var(--border-hover); color: var(--text-secondary); }
 
 /* ── Section heading ── */
 .section-tag {
@@ -250,9 +260,9 @@ body::before {
 }
 .section-tag::before {
   content: "";
-  width: 8px;
-  height: 2px;
-  background: var(--green);
+  width: 12px;
+  height: 1px;
+  background: var(--text-muted);
   border-radius: 1px;
 }
 

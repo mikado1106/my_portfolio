@@ -35,7 +35,13 @@ export default function Home() {
           transition={{ duration: 0.3 }}
         >
           <Hero />
-          <main id="main-content" className="max-w-5xl mx-auto px-5 sm:px-8 pb-24">
+          <main id="main-content" className="relative max-w-5xl mx-auto px-5 sm:px-8 pb-24">
+            {/* Subtle ambient background for main content */}
+            <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
+              <div className="ambient-glow w-[400px] h-[400px] bg-[var(--green)] top-[15%] right-[-20%]" />
+              <div className="ambient-glow w-[350px] h-[350px] bg-[var(--blue)] top-[45%] left-[-15%]" />
+              <div className="ambient-glow w-[300px] h-[300px] bg-[var(--purple)] top-[75%] right-[-10%]" />
+            </div>
             <div className="space-y-28">
               <ExperienceSection />
               <SectionDivider />

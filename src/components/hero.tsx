@@ -65,8 +65,10 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background - subtle grid only */}
-      <div className="absolute inset-0 grid-bg" aria-hidden="true" />
+      {/* Background - dot pattern + ambient glows */}
+      <div className="absolute inset-0 dot-bg" aria-hidden="true" />
+      <div className="ambient-glow w-[600px] h-[600px] bg-[var(--green)] top-[-20%] right-[-10%]" aria-hidden="true" />
+      <div className="ambient-glow w-[500px] h-[500px] bg-[var(--blue)] bottom-[-10%] left-[-15%]" aria-hidden="true" />
 
       <div className="relative z-10 max-w-5xl mx-auto w-full px-5 sm:px-8 pt-20">
         <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-start">

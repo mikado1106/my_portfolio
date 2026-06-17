@@ -38,7 +38,7 @@ export function StackSection() {
             <motion.div
               key={cat.label}
               variants={fadeUp}
-              className="p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-colors group"
+              className="p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-all hover:shadow-md hover:shadow-black/5 group"
             >
               {/* Category header */}
               <div className="flex items-center gap-2.5 mb-4">
