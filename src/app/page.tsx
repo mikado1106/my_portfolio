@@ -471,7 +471,7 @@ function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.55 }}
             >
-              Front-end developer with a passion for crafting modern, performant, and accessible user interfaces. Fresh graduate with hands-on experience building an employee management system and interning as a front-end developer.
+              Full-stack developer building practical web applications with PHP, CodeIgniter, and modern JavaScript. Fresh graduate with a 6-month full-stack internship and hands-on experience building an end-to-end employee management system.
             </motion.p>
 
             <motion.div
@@ -568,25 +568,25 @@ function ExperienceSection() {
             company="Mandiri Inhealth"
             period="Jan – Jun 2025"
             items={[
-              "Maintained corporate website — 99% uptime",
-              "Resolved 10+ production bugs",
-              "Built RESTful API integrations",
-              "Docker-based dev environment setup",
+              "Built auto-email notifications for the Whistleblowing System (WBS)",
+              "Redesigned 5 corporate website pages",
+              "Worked across frontend & backend with PHP CodeIgniter 4",
+              "Set up Docker dev environment; daily Git workflow",
             ]}
-            tags={["PHP", "CodeIgniter", "Docker", "MySQL"]}
+            tags={["PHP", "CodeIgniter", "Docker", "Git"]}
           />
         </motion.div>
 
         <motion.div variants={fadeUp}>
           <ExpCard
             role="Full Stack Developer"
-            company="HRIS System"
-            period="Jun 2022 – Jan 2026"
+            company="Final Project · PT. Papande Jaya Teknik"
+            period="Aug – Dec 2025"
             items={[
-              "Built full-cycle HRIS from scratch",
-              "50% less manual data entry",
-              "Managed ~40 employee records",
-              "Automated attendance tracking",
+              "Built a full-cycle HRIS from scratch",
+              "6 modules incl. attendance & leave",
+              "Designed MySQL schema with 9 tables",
+              "Role-based access (Owner/Admin vs Employee)",
             ]}
             tags={["PHP", "CodeIgniter 4", "MySQL"]}
           />
@@ -637,27 +637,27 @@ function ProjectsSection() {
   const projects = [
     {
       name: "Employee Management System",
-      desc: "Full-cycle HRIS — digitized HR processes, centralized data, automated attendance. Reduced manual entry time by half.",
-      impact: "50% efficiency gain",
+      desc: "Full-cycle HRIS for PT. Papande Jaya Teknik (~40 employees) — 6 modules covering employee data, attendance, leave, permissions, recruitment, and an admin dashboard.",
+      impact: "Final year project",
       tags: ["PHP", "CodeIgniter 4", "MySQL"],
       color: "var(--green)",
-      github: "https://github.com/mikado1106",
+      github: "https://github.com/mikado1106/employee-management-system",
     },
     {
       name: "Salon Reservation App",
-      desc: "Mobile booking app with real-time Firebase sync. Optimized UX flow reduced booking friction significantly.",
-      impact: "40% faster booking",
-      tags: ["Flutter", "Dart", "Firebase"],
+      desc: "Mobile UI prototype for salon booking built with Flutter — service browsing, calendar-based scheduling, and booking confirmation. Built in a team of 3.",
+      impact: "Flutter UI prototype",
+      tags: ["Flutter", "Dart"],
       color: "var(--blue)",
-      github: "https://github.com/mikado1106",
+      github: "https://github.com/mikado1106/salon-reservation-app",
     },
     {
       name: "Tourism Web Platform",
-      desc: "Interactive tourism site with 20+ destinations, curated content, and responsive design for all devices.",
-      impact: "20+ destinations live",
+      desc: "Interactive tourism site with 20+ destinations, search, category filtering, and full CRUD content management. Responsive design for all devices.",
+      impact: "20+ destinations",
       tags: ["PHP", "MySQL", "HTML/CSS"],
       color: "var(--amber)",
-      github: "https://github.com/mikado1106",
+      github: "https://github.com/mikado1106/tourism-web-platform",
     },
   ];
 
@@ -763,7 +763,7 @@ function StackSection() {
     { label: "Languages", items: ["PHP", "JavaScript", "TypeScript", "Dart", "SQL", "HTML/CSS"] },
     { label: "Frontend", items: ["React", "Next.js", "Flutter", "Tailwind CSS"] },
     { label: "Backend", items: ["CodeIgniter 4", "Node.js", "REST APIs"] },
-    { label: "Data & Infra", items: ["MySQL", "Firebase", "Docker", "Git"] },
+    { label: "Data & Infra", items: ["MySQL", "Docker", "Git"] },
     { label: "Design", items: ["Figma", "UI/UX", "Responsive Design"] },
   ];
 
