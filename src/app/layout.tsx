@@ -13,23 +13,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mikhael Edo Sinambela | Front-end Developer",
+  title: "Mikhael Edo Sinambela | Full-Stack Developer",
   description:
-    "Front-end developer with a passion for crafting modern, performant, and accessible user interfaces. Fresh graduate with hands-on experience in React, Next.js, and Flutter.",
+    "Full-stack developer building practical web applications with PHP, CodeIgniter, and modern JavaScript. Fresh graduate with a 6-month full-stack internship and an end-to-end HRIS project.",
   keywords: [
     "Mikhael Edo Sinambela",
-    "Front-end Developer",
-    "React Developer",
-    "Next.js",
+    "Full-Stack Developer",
+    "PHP Developer",
+    "CodeIgniter",
     "Jakarta",
     "Indonesia",
   ],
   authors: [{ name: "Mikhael Edo Sinambela" }],
   icons: { icon: "/icon.svg" },
   openGraph: {
-    title: "Mikhael Edo Sinambela | Front-end Developer",
+    title: "Mikhael Edo Sinambela | Full-Stack Developer",
     description:
-      "Front-end developer with a passion for crafting modern, performant, and accessible user interfaces.",
+      "Full-stack developer building practical web applications with PHP, CodeIgniter, and modern JavaScript.",
     type: "website",
   },
 };
