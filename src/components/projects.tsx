@@ -13,15 +13,19 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6 } },
 };
 
+type ProjectsData = Project[] | Record<"en" | "id", Project[]>;
+
 export function ProjectsSection() {
-  const [projects, setProjects] = useState<any>(staticProjects);
+  const [projects, setProjects] = useState<ProjectsData>(staticProjects);
   const [selected, setSelected] = useState<Project | null>(null);
   const { lang, dict } = useLanguage();
 
   useEffect(() => {
+    let cancelled = false;
     fetchProjects().then(result => {
-      if (result.data) setProjects(result.data);
+      if (!cancelled && result.data) setProjects(result.data as ProjectsData);
     });
+    return () => { cancelled = true; };
   }, []);
 
   const list: Project[] = Array.isArray(projects)

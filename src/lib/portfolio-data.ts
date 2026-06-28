@@ -17,14 +17,17 @@ export async function fetchProjects() {
     }
 
     // Map Supabase format to component format
+    // Note: Supabase schema does not yet include `highlights` — defaults to [] so the
+    // ProjectModal still renders cleanly. Static `projects.ts` keeps the rich CV bullets.
     const mapped = data.map(p => ({
       name: p.title,
       desc: p.description,
-      impact: p.long_description || '',
+      impact: p.category || '',
       tags: p.tech_stack || [],
       color: 'var(--green)',
       github: p.github_url || '#',
-      liveUrl: p.live_url,
+      liveUrl: p.live_url || undefined,
+      highlights: [] as string[],
       imageUrl: p.image_url,
       featured: p.featured,
     }))
