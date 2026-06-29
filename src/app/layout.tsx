@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/smooth-scroll";
 import { LanguageProvider } from "@/contexts/language-context";
+import { HtmlLang } from "@/components/html-lang";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,21 +43,12 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mikhaeledo.com",
     siteName: "Mikhael Edo Sinambela",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Mikhael Edo Sinambela — Junior Full-Stack Developer",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Mikhael Edo Sinambela | Junior Full-Stack Developer",
     description:
       "Junior Full-Stack Developer — built a complete HRIS for 40 employees and a corporate website using PHP/CodeIgniter, Next.js, and Flutter.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -115,6 +107,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <LanguageProvider>
+          <HtmlLang />
           <SmoothScroll>
             {children}
           </SmoothScroll>

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://mikhaeledo.vercel.app/sitemap.xml",
+    sitemap: "https://mikhaeledo.com/sitemap.xml",
   };
 }

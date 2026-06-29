@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
+import { siteConfig } from "@/config/site";
 
 export const runtime = "edge";
-export const alt = "Mikhael Edo Sinambela — Full-Stack Developer";
+export const alt = "Mikhael Edo Sinambela — Junior Full-Stack Developer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -16,7 +17,7 @@ export default async function Image() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#09090b",
+          backgroundColor: "#0d0d10",
           fontFamily: "system-ui, sans-serif",
         }}
       >
@@ -42,30 +43,32 @@ export default async function Image() {
             position: "relative",
           }}
         >
-          {/* Green dot */}
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "6px 16px",
-              borderRadius: "9999px",
-              border: "1px solid #232326",
-              backgroundColor: "#111113",
-              fontSize: "14px",
-              color: "#52525b",
-            }}
-          >
+          {/* Open to work badge */}
+          {siteConfig.openToWork && (
             <div
               style={{
-                width: "8px",
-                height: "8px",
-                borderRadius: "50%",
-                backgroundColor: "#10b981",
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "6px 16px",
+                borderRadius: "9999px",
+                border: "1px solid #232326",
+                backgroundColor: "#111113",
+                fontSize: "14px",
+                color: "#52525b",
               }}
-            />
-            Available for opportunities
-          </div>
+            >
+              <div
+                style={{
+                  width: "8px",
+                  height: "8px",
+                  borderRadius: "50%",
+                  backgroundColor: "#10b981",
+                }}
+              />
+              Available for opportunities
+            </div>
+          )}
 
           {/* Name */}
           <div
@@ -89,7 +92,7 @@ export default async function Image() {
               marginTop: "4px",
             }}
           >
-            Full-Stack Developer · Jakarta, Indonesia
+            Junior Full-Stack Developer · Jakarta, Indonesia
           </div>
 
           {/* Tags */}

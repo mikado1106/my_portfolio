@@ -22,6 +22,7 @@ export function ContactSection() {
         <p className="text-sm text-[var(--text-secondary)] max-w-md">
           {dict.contact.desc}
         </p>
+        <p className="text-xs text-[var(--text-muted)] mt-2">{dict.contact.replyTime}</p>
       </motion.div>
 
       <div className="grid md:grid-cols-2 gap-4">
@@ -133,7 +134,7 @@ function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="w-full py-2.5 rounded-lg bg-[var(--text)] text-[var(--bg)] text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
+        className="w-full py-2.5 rounded-lg bg-[var(--text)] text-[var(--bg)] text-sm font-medium hover:opacity-90 transition-opacity disabled:opacity-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-card)]"
       >
         {status === "idle" && dict.contact.send}
         {status === "sending" && dict.contact.sending}

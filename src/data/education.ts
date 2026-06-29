@@ -14,9 +14,8 @@ export const education: Record<"en" | "id", Education[]> = {
       period: "Jun 2022 – Jan 2026",
       description: "Focused on software engineering, web development, and database systems.",
       achievements: [
-        "Built multiple fullstack projects",
-        "Active in campus tech community",
-        "Final project: Employee Management System (HRIS)",
+        "Final-year thesis: built a 6-module HRIS for PT. Papande Jaya Teknik (±40 employees) from scratch",
+        "Completed web and mobile coursework: PHP, Next.js, Flutter across multiple course projects",
       ],
     },
   ],
@@ -27,9 +26,8 @@ export const education: Record<"en" | "id", Education[]> = {
       period: "Jun 2022 – Jan 2026",
       description: "Fokus pada rekayasa perangkat lunak, pengembangan web, dan sistem basis data.",
       achievements: [
-        "Membangun berbagai proyek fullstack",
-        "Aktif di komunitas teknologi kampus",
-        "Tugas Akhir: Sistem Manajemen Karyawan (HRIS)",
+        "Tugas akhir: membangun HRIS 6 modul untuk PT. Papande Jaya Teknik (±40 karyawan) dari nol",
+        "Menyelesaikan mata kuliah web dan mobile: PHP, Next.js, Flutter di berbagai proyek kuliah",
       ],
     },
   ]
