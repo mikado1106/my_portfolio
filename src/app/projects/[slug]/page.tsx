@@ -104,6 +104,41 @@ export default function ProjectCaseStudy() {
               </p>
             </motion.div>
 
+            {/* Visual mockup */}
+            <motion.div variants={fadeUp} className="mb-8">
+              <div className="rounded-xl overflow-hidden border border-[var(--border)]">
+                {/* Browser chrome */}
+                <div className="h-8 flex items-center gap-1.5 px-3 bg-[var(--bg-elevated)] border-b border-[var(--border)]">
+                  <span className="w-2 h-2 rounded-full bg-[var(--border)]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--border)]" />
+                  <span className="w-2 h-2 rounded-full bg-[var(--border)]" />
+                  <div className="flex-1 mx-2 h-4 rounded bg-[var(--bg)] flex items-center px-2 gap-1.5">
+                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="shrink-0 text-[var(--text-muted)]" aria-hidden="true">
+                      <rect x="3" y="11" width="11" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 9.9-1"/>
+                    </svg>
+                    <span className="text-[9px] font-mono text-[var(--text-muted)] truncate leading-none">
+                      {project.liveUrl ?? `mikhaeledo.com/projects/${project.slug}`}
+                    </span>
+                  </div>
+                </div>
+                {/* Screen */}
+                <div className="relative h-44 sm:h-56 flex flex-col items-center justify-center gap-3 overflow-hidden bg-[var(--bg-card)]">
+                  <div className="absolute inset-0 pointer-events-none" style={{ background: project.color, opacity: 0.05 }} />
+                  <div
+                    className="w-11 h-11 rounded-xl flex items-center justify-center text-base font-bold relative z-10 select-none"
+                    style={{ border: `1.5px solid`, borderColor: project.color, color: project.color }}
+                  >
+                    {project.name.charAt(0)}
+                  </div>
+                  <p className="text-[11px] font-mono text-[var(--text-muted)] relative z-10">
+                    {project.liveUrl
+                      ? project.liveUrl.replace("https://", "")
+                      : "preview not available"}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Action links */}
             <motion.div variants={fadeUp} className="flex items-center gap-3 mb-10 pb-10 border-b border-[var(--border)]">
               {project.liveUrl && (
