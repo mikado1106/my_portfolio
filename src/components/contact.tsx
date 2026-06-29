@@ -67,7 +67,7 @@ function ContactForm() {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify({ name, email, message, website: '' }), // honeypot always empty for humans
       });
 
       if (!response.ok) throw new Error('Failed to send');
@@ -83,6 +83,15 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full h-full p-5 rounded-xl bg-[var(--bg-card)] border border-[var(--border)] flex flex-col gap-4">
+      {/* Honeypot — visually hidden, bots fill this */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }}
+      />
       <h3 className="text-sm font-semibold text-[var(--text)]">{dict.contact.quickMsg}</h3>
 
       <div className="flex flex-col gap-1.5">
