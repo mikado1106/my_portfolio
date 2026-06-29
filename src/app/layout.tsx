@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mikhael Edo Sinambela | Full-Stack Developer",
+  title: "Mikhael Edo Sinambela | Junior Full-Stack Developer",
   description:
-    "Full-stack developer who shipped an HRIS serving 40+ employees and maintained a corporate site at 99% uptime. Building fast, accessible interfaces with React, Next.js, and modern tools.",
+    "Junior Full-Stack Developer — built a complete HRIS for 40 employees and a corporate website using PHP/CodeIgniter, Next.js, and Flutter. Based in Jakarta, open to remote.",
   keywords: [
     "Mikhael Edo Sinambela",
+    "Junior Full-Stack Developer",
     "Full-Stack Developer",
-    "Front-end Developer",
     "React Developer",
     "Next.js",
     "Jakarta",
@@ -33,29 +33,29 @@ export const metadata: Metadata = {
   authors: [{ name: "Mikhael Edo Sinambela" }],
   creator: "Mikhael Edo Sinambela",
   icons: { icon: "/icon.svg" },
-  metadataBase: new URL("https://mikhaeledo.vercel.app"),
+  metadataBase: new URL("https://mikhaeledo.com"),
   openGraph: {
-    title: "Mikhael Edo Sinambela | Full-Stack Developer",
+    title: "Mikhael Edo Sinambela | Junior Full-Stack Developer",
     description:
-      "Full-stack developer who shipped an HRIS serving 40+ employees and maintained a corporate site at 99% uptime.",
+      "Junior Full-Stack Developer — built a complete HRIS for 40 employees and a corporate website using PHP/CodeIgniter, Next.js, and Flutter.",
     type: "website",
     locale: "en_US",
-    url: "https://mikhaeledo.vercel.app",
+    url: "https://mikhaeledo.com",
     siteName: "Mikhael Edo Sinambela",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Mikhael Edo Sinambela — Full-Stack Developer",
+        alt: "Mikhael Edo Sinambela — Junior Full-Stack Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mikhael Edo Sinambela | Full-Stack Developer",
+    title: "Mikhael Edo Sinambela | Junior Full-Stack Developer",
     description:
-      "Full-stack developer who shipped an HRIS serving 40+ employees and maintained a corporate site at 99% uptime.",
+      "Junior Full-Stack Developer — built a complete HRIS for 40 employees and a corporate website using PHP/CodeIgniter, Next.js, and Flutter.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -76,11 +76,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Mikhael Edo Sinambela",
-  url: "https://mikhaeledo.vercel.app",
-  jobTitle: "Full-Stack Developer",
+  url: "https://mikhaeledo.com",
+  jobTitle: "Junior Full-Stack Developer",
   worksFor: {
     "@type": "Organization",
-    name: "Freelance",
+    name: "Open to opportunities",
   },
   address: {
     "@type": "PostalAddress",

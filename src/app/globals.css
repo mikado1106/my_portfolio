@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --bg: #09090b;
+  --bg: #0d0d10;
   --bg-elevated: #111113;
   --bg-card: #151517;
   --bg-hover: #1c1c1f;
@@ -13,7 +13,7 @@
   --border-hover: #2e2e32;
   --text: #fafafa;
   --text-secondary: #a1a1aa;
-  --text-muted: #52525b;
+  --text-muted: #71717a;
   --green: #10b981;
   --green-glow: rgba(16, 185, 129, 0.15);
   --blue: #6366f1;

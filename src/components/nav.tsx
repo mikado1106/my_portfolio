@@ -29,7 +29,6 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
   const navItems = [
     { id: "experience", label: dict.nav.experience },
     { id: "projects", label: dict.nav.projects },
-    { id: "education", label: dict.nav.education },
     { id: "stack", label: dict.nav.stack },
     { id: "contact", label: dict.nav.contact },
   ];
@@ -53,12 +52,12 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
         aria-label="Main navigation"
       >
         <div className="max-w-5xl mx-auto flex items-center justify-between h-14 px-5 sm:px-8">
-          <a href="#" className="text-sm font-medium tracking-tight text-[var(--text)] font-mono">
+          <a href="/" className="text-sm font-medium tracking-tight text-[var(--text)] font-mono">
             Mikhaeledo<span className="text-[var(--green)]">.</span>
           </a>
           <div className="hidden md:flex items-center gap-7">
             {navItems.map((item) => (
-              <a key={item.id} href={`#${item.id}`} className="nav-link">{item.label}</a>
+              <a key={item.id} href={`/#${item.id}`} className="nav-link">{item.label}</a>
             ))}
           </div>
           <div className="flex items-center gap-2">
@@ -90,7 +89,7 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
               Resume
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="hidden md:inline-block text-xs font-medium px-3.5 py-1.5 rounded-md bg-[var(--text)] text-[var(--bg)] hover:opacity-90 transition-opacity cursor-pointer"
             >
               {lang === 'id' ? 'Hubungi' : "Let's talk"}
@@ -129,7 +128,7 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
           {navItems.map((item, i) => (
             <motion.a
               key={item.id}
-              href={`#${item.id}`}
+              href={`/#${item.id}`}
               onClick={() => setMobileOpen(false)}
               className="text-2xl font-semibold text-[var(--text)] hover:text-[var(--green)] transition-colors"
               initial={{ opacity: 0, y: 20 }}
@@ -154,7 +153,7 @@ export function Nav({ theme, toggleTheme }: { theme: string; toggleTheme: () => 
               Download CV
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setMobileOpen(false)}
               className="inline-flex items-center justify-center text-sm font-medium px-5 py-2.5 rounded-lg bg-[var(--text)] text-[var(--bg)]"
             >

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MagneticButton } from "@/components/ui/magnetic-button";
 import { useLanguage } from "@/contexts/language-context";
+import { siteConfig } from "@/config/site";
 
 // Framer Motion Variants
 const staggerContainer = {
@@ -96,21 +97,30 @@ export function Hero() {
               </div>
             </motion.div>
 
-            <motion.div variants={fadeUpBlur}>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[11px] text-[var(--text-muted)] mb-6 font-medium">
-                <span className="w-[6px] h-[6px] rounded-full bg-[var(--green)] pulse" aria-hidden="true" />
-                {dict.hero.available}
-              </div>
-            </motion.div>
+            {siteConfig.openToWork && (
+              <motion.div variants={fadeUpBlur}>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[var(--border)] bg-[var(--bg-elevated)] text-[11px] text-[var(--text-muted)] mb-6 font-medium">
+                  <span className="w-[6px] h-[6px] rounded-full bg-[var(--green)] pulse" aria-hidden="true" />
+                  {dict.hero.available}
+                </div>
+              </motion.div>
+            )}
 
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tighter leading-[1.05] text-[var(--text)] mb-6"
+              className="text-4xl sm:text-5xl lg:text-7xl font-semibold tracking-tighter leading-[1.05] text-[var(--text)] mb-2"
               variants={fadeUpBlur}
             >
               Mikhael Edo
               <br />
               <span className="text-[var(--text-secondary)]">Sinambela</span>
             </motion.h1>
+
+            <motion.p
+              className="text-xs font-mono uppercase tracking-widest text-[var(--text-secondary)] mb-6"
+              variants={fadeUpBlur}
+            >
+              Junior Full-Stack Developer
+            </motion.p>
 
             <motion.p
               className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed max-w-lg mb-8 font-light"
@@ -120,7 +130,7 @@ export function Hero() {
             </motion.p>
 
             <motion.div
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap items-center gap-4"
               variants={fadeUpBlur}
             >
               <MagneticButton>
@@ -133,12 +143,19 @@ export function Hero() {
               </MagneticButton>
               <MagneticButton>
                 <a
-                  href="#projects"
+                  href="/cv.pdf"
+                  download="Mikhael-Edo-Sinambela-CV.pdf"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-card)] text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all shadow-sm"
                 >
-                  {dict.hero.projectsBtn}
+                  {dict.hero.cvBtn}
                 </a>
               </MagneticButton>
+              <a
+                href="#projects"
+                className="text-sm text-[var(--text-muted)] hover:text-[var(--text)] transition-colors"
+              >
+                {dict.hero.projectsBtn}
+              </a>
             </motion.div>
 
             <motion.div

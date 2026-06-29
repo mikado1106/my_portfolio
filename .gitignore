@@ -39,3 +39,19 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+
+# AI tooling
+.kiro/
+.claude/
+.claude-flow/
+.swarm/
+.playwright-mcp/
+ruvector.db
+AGENTS.md
+CLAUDE.md
+.mcp.json
+
+# Screenshots (root only)
+/*.png

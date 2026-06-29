@@ -4,9 +4,8 @@ export interface StackCategory {
 }
 
 export const stack: StackCategory[] = [
-  { label: "Languages", items: ["PHP", "JavaScript", "TypeScript", "Python", "Dart", "SQL", "Visual Basic .NET", "HTML/CSS"] },
-  { label: "Frontend", items: ["React", "Next.js", "Flutter", "Tailwind CSS"] },
-  { label: "Backend", items: ["CodeIgniter 4", "Node.js", "REST APIs"] },
-  { label: "Data & Infra", items: ["MySQL", "Firebase", "Docker Desktop", "Git"] },
-  { label: "Tools", items: ["Mindview", "ProjectLibre", "Figma", "UI/UX"] },
+  { label: "Languages", items: ["JavaScript", "TypeScript", "PHP", "Dart", "HTML/CSS", "SQL"] },
+  { label: "Frameworks", items: ["Next.js", "CodeIgniter 4", "Flutter", "Tailwind CSS", "Bootstrap"] },
+  { label: "Database", items: ["MySQL"] },
+  { label: "Tools", items: ["Git", "GitHub", "Docker", "Postman", "REST API", "VS Code"] },
 ];

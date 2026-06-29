@@ -8,6 +8,7 @@ import { Hero } from "@/components/hero";
 import { ExperienceSection } from "@/components/experience";
 import { OrganizationSection } from "@/components/organization";
 import { ProjectsSection } from "@/components/projects";
+
 import { EducationSection } from "@/components/education";
 import { StackSection } from "@/components/stack";
 import { ContactSection } from "@/components/contact";
@@ -45,13 +46,13 @@ export default function Home() {
             <div className="space-y-28">
               <ExperienceSection />
               <SectionDivider />
-              <OrganizationSection />
-              <SectionDivider />
               <ProjectsSection />
+              <SectionDivider />
+              <StackSection />
               <SectionDivider />
               <EducationSection />
               <SectionDivider />
-              <StackSection />
+              <OrganizationSection />
               <SectionDivider />
               <ContactSection />
             </div>

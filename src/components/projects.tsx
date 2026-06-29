@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Section } from "@/components/ui/section";
 import { projects as staticProjects } from "@/data/projects";
 import type { Project } from "@/data/projects";
-import { fetchProjects } from "@/lib/portfolio-data";
 import { useLanguage } from "@/contexts/language-context";
 
 const fadeUp = {
@@ -13,39 +13,65 @@ const fadeUp = {
   visible: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.6 } },
 };
 
-type ProjectsData = Project[] | Record<"en" | "id", Project[]>;
-
 export function ProjectsSection() {
-  const [projects, setProjects] = useState<ProjectsData>(staticProjects);
   const [selected, setSelected] = useState<Project | null>(null);
+  const [filter, setFilter] = useState("all");
   const { lang, dict } = useLanguage();
 
-  useEffect(() => {
-    let cancelled = false;
-    fetchProjects().then(result => {
-      if (!cancelled && result.data) setProjects(result.data as ProjectsData);
-    });
-    return () => { cancelled = true; };
-  }, []);
+  const list: Project[] = staticProjects[lang] || staticProjects.en;
 
-  const list: Project[] = Array.isArray(projects)
-    ? projects
-    : (projects[lang] || projects.en);
+  const filters = [
+    { key: "all", label: dict.projects.filterAll },
+    { key: "fullstack", label: dict.projects.filterFullstack },
+    { key: "frontend", label: dict.projects.filterFrontend },
+    { key: "mobile", label: dict.projects.filterMobile },
+    { key: "backend", label: dict.projects.filterBackend },
+  ];
+
+  const filtered = filter === "all" ? list : list.filter((p) => p.category === filter);
 
   return (
     <Section id="projects">
       <motion.div variants={fadeUp}>
         <p className="section-tag">{dict.projects.title}</p>
-        <h2 className="text-2xl font-semibold text-[var(--text)] mb-8 tracking-tighter">{dict.projects.subtitle}</h2>
+        <h2 className="text-2xl font-semibold text-[var(--text)] mb-6 tracking-tighter">
+          {dict.projects.subtitle}
+        </h2>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-4">
-        {list.map((p) => (
-          <motion.div key={p.name} variants={fadeUp}>
-            <ProjectCard {...p} onClick={() => setSelected(p)} />
-          </motion.div>
+      {/* Filter tabs */}
+      <motion.div variants={fadeUp} className="flex flex-wrap gap-2 mb-6">
+        {filters.map((f) => (
+          <button
+            key={f.key}
+            onClick={() => setFilter(f.key)}
+            className={`text-xs px-3 py-1.5 rounded-full border transition-all cursor-pointer ${
+              filter === f.key
+                ? "border-[var(--green)] text-[var(--green)] bg-[var(--green-glow)]"
+                : "border-[var(--border)] text-[var(--text-muted)] hover:border-[var(--border-hover)] hover:text-[var(--text-secondary)]"
+            }`}
+          >
+            {f.label}
+          </button>
         ))}
-      </div>
+      </motion.div>
+
+      <AnimatePresence mode="popLayout">
+        <div className="grid md:grid-cols-2 gap-4">
+          {filtered.map((p) => (
+            <motion.div
+              key={p.slug}
+              layout
+              initial={{ opacity: 0, scale: 0.97 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.97 }}
+              transition={{ duration: 0.25 }}
+            >
+              <ProjectCard {...p} onClick={() => setSelected(p)} />
+            </motion.div>
+          ))}
+        </div>
+      </AnimatePresence>
 
       <motion.div variants={fadeUp} className="mt-8 text-center">
         <a
@@ -55,13 +81,13 @@ export function ProjectsSection() {
           className="inline-flex items-center gap-2 text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors font-medium"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
           </svg>
           {dict.projects.github}
         </a>
       </motion.div>
 
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      <ProjectModal project={selected} onClose={() => setSelected(null)} dict={dict} />
     </Section>
   );
 }
@@ -73,14 +99,12 @@ function ProjectCard({ name, desc, impact, tags, color, onClick }: Project & { o
       className="group w-full h-full text-left flex flex-col p-6 rounded-2xl bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--border-hover)] transition-all cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-black/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green)]"
       aria-label={`${name} — ${impact}. Click to see details.`}
     >
-      {/* Top accent line */}
       <div className="h-px w-12 mb-5 rounded-full" style={{ background: color }} aria-hidden="true" />
 
       <div className="flex items-center justify-between mb-3">
         <span className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)]">
           {impact}
         </span>
-        {/* "expand" hint icon */}
         <svg
           width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
           className="text-[var(--text-muted)] group-hover:text-[var(--text)] transition-colors"
@@ -102,8 +126,7 @@ function ProjectCard({ name, desc, impact, tags, color, onClick }: Project & { o
   );
 }
 
-function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
-  // Close on Escape key
+function ProjectModal({ project, onClose, dict }: { project: Project | null; onClose: () => void; dict: ReturnType<typeof useLanguage>["dict"] }) {
   useEffect(() => {
     if (!project) return;
     const handler = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
@@ -111,7 +134,6 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
     return () => document.removeEventListener("keydown", handler);
   }, [project, onClose]);
 
-  // Lock body scroll when open
   useEffect(() => {
     document.body.style.overflow = project ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
@@ -121,7 +143,6 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
     <AnimatePresence>
       {project && (
         <>
-          {/* Backdrop */}
           <motion.div
             key="backdrop"
             initial={{ opacity: 0 }}
@@ -133,7 +154,6 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
             aria-hidden="true"
           />
 
-          {/* Modal panel */}
           <motion.div
             key="modal"
             role="dialog"
@@ -146,11 +166,9 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
             className="fixed inset-x-4 bottom-0 sm:inset-auto sm:left-1/2 sm:-translate-x-1/2 sm:top-1/2 sm:-translate-y-1/2 z-50 w-full sm:max-w-lg"
           >
             <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-t-2xl sm:rounded-2xl shadow-2xl shadow-black/40 overflow-hidden">
-              {/* Accent bar */}
               <div className="h-1 w-full" style={{ background: project.color }} />
 
               <div className="p-6">
-                {/* Header */}
                 <div className="flex items-start justify-between gap-4 mb-5">
                   <div>
                     <span className="text-[10px] font-semibold uppercase tracking-widest text-[var(--text-muted)] mb-1 block">
@@ -164,12 +182,11 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
                     aria-label="Close"
                   >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
                     </svg>
                   </button>
                 </div>
 
-                {/* Highlights */}
                 {project.highlights && project.highlights.length > 0 && (
                   <ul className="space-y-2.5 mb-5">
                     {project.highlights.map((h, i) => (
@@ -181,15 +198,13 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
                   </ul>
                 )}
 
-                {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-5">
                   {project.tags.map((t) => (
                     <span key={t} className="tag px-2.5 py-1 text-[10px]">{t}</span>
                   ))}
                 </div>
 
-                {/* Action buttons */}
-                <div className="flex items-center gap-3 pt-4 border-t border-[var(--border)]">
+                <div className="flex items-center gap-2 pt-4 border-t border-[var(--border)]">
                   {project.liveUrl && (
                     <a
                       href={project.liveUrl}
@@ -198,22 +213,29 @@ function ProjectModal({ project, onClose }: { project: Project | null; onClose: 
                       className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-[var(--text)] text-[var(--bg)] text-sm font-semibold hover:opacity-90 transition-opacity"
                     >
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                        <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        <circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
                       </svg>
-                      View Live
+                      Live
                     </a>
                   )}
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${project.liveUrl ? "" : "flex-1"} inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-[var(--border)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all`}
+                    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl border border-[var(--border)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all"
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                     </svg>
                     GitHub
                   </a>
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    onClick={onClose}
+                    className="inline-flex items-center justify-center gap-1.5 py-2.5 px-4 rounded-xl border border-[var(--border)] text-sm font-medium text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-hover)] transition-all"
+                  >
+                    {dict.projects.caseStudy}
+                  </Link>
                 </div>
               </div>
             </div>
