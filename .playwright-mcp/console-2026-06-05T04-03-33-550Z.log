@@ -1,0 +1,20 @@
+[     816ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[     885ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1253ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1572ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[    1759ms] [LOG] [Fast Refresh] done in 298ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   33015ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   33171ms] [LOG] [Fast Refresh] done in 257ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   33371ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   33424ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   33690ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   57497ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   57650ms] [LOG] [Fast Refresh] done in 259ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   57983ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   58050ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[   58417ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  144907ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  144924ms] [LOG] [Fast Refresh] done in 123ms @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  145044ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  145102ms] [LOG] [HMR] connected @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
+[  145309ms] [WARNING] Image with src "/profile.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes @ http://localhost:6001/_next/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477
